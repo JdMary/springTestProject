@@ -1,2 +1,22 @@
-package com.example.demo.entity;public class Task {
+package com.example.demo.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Getter
+@Setter
+@ToString
+public class Task {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String description;
+    private boolean completed;
+
 }
